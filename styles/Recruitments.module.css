@@ -1,60 +1,148 @@
 #main {
-	text-align: center;
-	padding-top: 1rem;
-	width: 95vw;
-	max-width: 1300px;
-	margin: auto;
-}
-
-.note {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 1rem;
+  width: 95vw;
+  max-width: 1300px;
+  margin: auto;
 }
 
 #video {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-	width: 100%;
-	max-width: 700px;
-	aspect-ratio: 16 / 9;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
 }
 
-#departments .department {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: justify;
-	line-height: 1.4rem;
-	border-style: groove;
-	border-width: 2px;
-	border-color: var(--accent);
-	border-radius: 15px;
-	padding: 15px;
+#departmentsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2.3rem;
+  padding-bottom: 3rem;
 }
 
-#departments {
-	text-align: left;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	grid-auto-flow: row;
-	gap: 2rem;
-	margin-bottom: 15px;
+#departmentOption {
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-@media screen and (max-width: 1100px) {
-	#departments {
-		grid-template-columns: repeat(2, 1fr);
-	}
+.active {
+  background-color: #db2b39;
+  color: white;
 }
 
-@media screen and (max-width: 700px) {
-	#departments {
-		grid-template-columns: repeat(1, 1fr);
-	}
+#departmentInfo {
+  grid-column: 2/5;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  align-items: flex-start;
 }
 
-.due_date {
-	margin-top: 0.25rem;
+#departmentOptions {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1rem;
+}
+
+.infoForms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+.infoTitle {
+  font-size: 3rem;
+}
+
+.infoDescription {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+.infoTitleContainer {
+  text-align: start;
+}
+
+.infoTitlePrecursor {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #db2b39;
+}
+
+.selectedDepartment {
+  text-decoration: #db2b39 wavy underline;
+}
+
+.link {
+  color: var(--accent);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1170px) {
+  #departmentsContainer {
+    display: block;
+  }
+
+  #departmentOptions {
+    padding: 0 5rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #departmentOptions {
+    padding: 0 5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  #departmentInfo {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #departmentOptions {
+    padding: 0 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 3rem;
+  }
+
+  #departmentInfo {
+    padding: 0 2rem;
+  }
+
+  .infoTitlePrecursor {
+    font-size: 1rem;
+  }
+
+  .infoDescription {
+    font-size: 1rem;
+  }
+
+  .infoTitle {
+    font-size: 1.6rem;
+  }
+
+  .infoForms {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
 }

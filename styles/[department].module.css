@@ -1,26 +1,26 @@
 #main {
-	height: auto;
-	padding-bottom: 2rem;
-	width: 95vw;
-	max-width: 1300px;
-	margin: auto;
+  height: auto;
+  padding-bottom: 2rem;
+  width: 95vw;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .departmentHeadingContainer {
-	text-align: center;
-	margin-block: 1rem;
+  text-align: center;
+  margin-block: 1rem;
 }
 
 .departmentHeadingContainer p {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 840px) {
-	#departmentTitle {
-		font-size: var(--medium-text);
-	}
+  #departmentTitle {
+    font-size: var(--medium-text);
+  }
 
-	.departmentHeadingContainer {
-		margin-block: 0.75rem;
-	}
+  .departmentHeadingContainer {
+    margin-block: 0.75rem;
+  }
 }
