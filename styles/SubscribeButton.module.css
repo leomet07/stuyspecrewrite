@@ -1,29 +1,30 @@
 #subscribe {
-	color: var(--primary-immutable);
-	font-family: var(--secondary-font);
-	font-weight: bold;
-	background-color: #db2b39;
-	padding: 10px 20px;
-	border-radius: 10px;
-	font-size: var(--small-text);
-	cursor: pointer;
-	margin: 0 auto;
-	display: block;
+  color: var(--primary-immutable);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  background-color: #db2b39;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: var(--small-text);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
 }
 
 #subscribe_button_navbar {
-	color: var(--primary-immutable);
-	font-family: var(--secondary-font);
-	font-weight: bold;
-	background-color: #db2b39;
-	padding: 10px 20px;
-	border-radius: 10px;
-	font-size: var(--small-text);
-	cursor: pointer;
-	margin: 0 auto;
-	display: block;
+  color: var(--primary-immutable);
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #db2b39;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: var(--extra-small-text);
+  cursor: pointer;
+  display: block;
+  margin-right: 1rem;
 }
 
 #subscribe:hover {
-	background-color: #a5222d;
+  background-color: #a5222d;
 }

@@ -1,142 +1,162 @@
 #nav_parent {
-	width: 100%;
-	background-color: var(--secondary-nav);
-}
-
-#nav {
-	width: 100%;
-	height: 65px;
-	padding: 1px 14px;
-
-	grid-template-columns: 48px 250px 120px 48px 48px;
-	grid-template-rows: 100%;
-	column-gap: 2rem;
-
-	display: flex;
-	align-items: center;
-	overflow: hidden;
-	/* align-self: flex-start; */
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--secondary-nav);
+  color: var(--primary-immutable);
 }
 
 #department_bar {
-	max-width: 800px;
-	height: fit-content;
-	display: flex;
-	justify-content: space-around;
-	margin-right: auto;
-	margin-left: auto;
-	font-family: var(--secondary-font);
-	align-items: center;
-	padding-bottom: 10px;
-	color: var(--primary-immutable);
+  max-width: 1000px;
+  font-weight: 800;
+  text-transform: uppercase;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: var(--secondary-font);
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-#subscribe_parent {
-	margin-left: auto;
+#subscribe_search {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#media_buttons {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+#media_button {
+  margin-right: 0.5rem;
+}
+
+#navbar_hero {
+  padding: 1.75rem 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#department_bar span:hover {
+  opacity: 0.75;
+  transition-duration: 0.25s;
+  transform: translateY(-2px);
 }
 
 #logo_container {
-	font-size: var(--large-text);
-	color: var(--primary-immutable);
-	justify-self: center;
-	width: 250px;
-	text-align: center;
-	position: absolute;
-	top: 32px;
-	/* position the top  edge of the element at the middle of the parent */
-	left: 50%;
-	/* position the left edge of the element at the middle of the parent */
-
-	transform: translate(-50%, -50%);
-	cursor: pointer;
-	font-family: "Old English Text MT";
+  font-size: var(--extra-large-text);
+  cursor: pointer;
+  font-family: "Old English Text MT";
+  text-align: center;
 }
 
+#date {
+  font-family: var(--secondary-font);
+  font-size: var(--extra-small-text);
+  text-transform: uppercase;
+  color: lightgray;
+  letter-spacing: 1px;
+}
 
 #hamburgerMenu {
-	/* display: none; */
-	background: none;
-	cursor: pointer;
+  display: none;
+  background: none;
+  cursor: pointer;
 }
 
+#media_button:hover,
 #hamburgerMenu:hover,
 #subscribe:hover,
 #searchButton:hover,
 .clickable_nav_element:hover {
-	opacity: 0.75;
+  transition-duration: 0.25s;
+  opacity: 0.75;
 }
 
 #hamburgerMenu:active,
 #subscribe:active,
 #searchButton:active,
 .clickable_nav_element:active {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
-@media screen and (max-width: 940px) {
-	#nav {
-		grid-template-columns: 48px calc(100% - 188px) 56px 56px;
-		column-gap: 1.5rem;
-	}
+@media screen and (max-width: 1050px) {
+  #hamburgerMenu {
+    display: block;
+    margin-left: 1rem;
+  }
 
-	#logo_container {
-		font-size: 2rem;
-		position: static;
+  #date,
+  #department_bar,
+  #media_buttons {
+    display: none;
+  }
 
-		transform: none;
-		float: left;
-		margin-right: auto;
-		width: fit-content;
-		margin-left: 10px;
-		width: 220px;
-		text-align: center;
-	}
+  #ghost {
+    height: 95px;
+  }
 
-	#subscribe_parent {
-		display: none;
-	}
+  #nav_parent {
+    height: 95px;
+    position: fixed;
+    background-color: var(--secondary-nav);
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    overflow: visible;
+    padding-right: 1rem;
+  }
 
-	#searchButton {
-		grid-column-start: 4;
-		grid-column-end: 4;
-		place-self: center;
-	}
+  #logo_container {
+    font-size: var(--large-text);
+    margin-left: 1.5rem;
+  }
 
-	#hamburgerMenu {
-		display: block;
-	}
+  #navbar_hero {
+    height: 95px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-	.hide {
-		display: none !important;
-	}
-
-	#department_bar {
-		display: none;
-		flex-direction: column;
-	}
+  #subscribe_search {
+    margin-left: auto;
+    padding-top: 0.5rem;
+  }
 }
 
-@media screen and (max-width: 480px) {
-	#logo_container {
-		width: 200px;
-	}
-}
+@media screen and (max-width: 490px) {
+  #logo_container {
+    font-size: var(--medium-text);
+  }
 
-@media screen and (max-width: 350px) {
-	#logo_container {
-		width: 140px;
-	}
+  #subscribe {
+    display: none;
+  }
 
-	#logo_the {
-		display: none;
-	}
+  #navbar_hero,
+  #ghost,
+  #nav_parent {
+    height: 65px;
+  }
 }
 
 .user_icon {
-	height: 36px;
-	width: 36px;
+  height: 36px;
+  width: 36px;
 }
 
 .clickable_nav_element {
-	cursor: pointer;
+  cursor: pointer;
 }

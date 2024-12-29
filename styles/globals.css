@@ -1,147 +1,147 @@
 @font-face {
-	font-family: "Playfair Display";
-	src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-family: "Playfair Display";
+  src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Lato";
-	src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Old English Text MT";
-	src: url("/fonts/OldEnglishTextMT/OldEnglishTextMT.ttf") format("truetype");
+  font-family: "Old English Text MT";
+  src: url("/fonts/OldEnglishTextMT/OldEnglishTextMT.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Minion Pro";
-	src: url("/fonts/MinionPro/MinionPro_Regular.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "Minion Pro";
+  src: url("/fonts/MinionPro/MinionPro_Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-	font-family: "Minion Pro";
-	src: url("/fonts/MinionPro/MinionPro_Italic.ttf") format("truetype");
-	font-style: italic;
-	font-weight: normal;
+  font-family: "Minion Pro";
+  src: url("/fonts/MinionPro/MinionPro_Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
 }
 
 @font-face {
-	font-family: "Minion Pro";
-	src: url("/fonts/MinionPro/MinionPro_Bold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: bold;
+  font-family: "Minion Pro";
+  src: url("/fonts/MinionPro/MinionPro_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
-	font-family: "Minion Pro";
-	src: url("/fonts/MinionPro/MinionPro_Bold_Italic.ttf") format("truetype");
-	font-style: italic;
-	font-weight: bold;
+  font-family: "Minion Pro";
+  src: url("/fonts/MinionPro/MinionPro_Bold_Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
 }
 
 :root {
-	--primary-immutable: #ffffff;
-	--accent: #4283e4;
-	--large-text: 2.25rem;
-	--medium-text: 1.75rem;
-	--small-text: 1rem;
-	--primary-font: "Minion Pro", Georgia;
-	--secondary-font: "Lato";
-	/* Light Theme, default */
-	--secondary-nav: #2e2e2e;
-	--primary: #353637;
-	--secondary: #ffffff;
-	--light-grey: #f1f1f1;
-	--medium-grey: #555555;
+  --primary-immutable: #ffffff;
+  --accent: #4283e4;
+  --extra-large-text: 4rem;
+  --large-text: 2.25rem;
+  --medium-text: 1.75rem;
+  --small-text: 1rem;
+  --extra-small-text: 0.75rem;
+  --primary-font: "Minion Pro", Georgia;
+  --secondary-font: "Lato";
+  /* Light Theme, default */
+  --secondary-nav: #2e2e2e;
+  --primary: #353637;
+  --secondary: #ffffff;
+  --light-grey: #f1f1f1;
+  --medium-grey: #555555;
 }
 
-[data-theme='dark'] {
-	/* Dark Theme */
-	--secondary-nav: #272525;
-	--primary: #ffffff;
-	--secondary: #2c2c2c;
-	--light-grey: #272525;
-	--medium-grey: #e9e8e8;
+[data-theme="dark"] {
+  /* Dark Theme */
+  --secondary-nav: #272525;
+  --primary: #ffffff;
+  --secondary: #2c2c2c;
+  --light-grey: #272525;
+  --medium-grey: #e9e8e8;
 }
 
-[data-theme='dark'] [data-hide-on-theme='dark'],
-[data-theme='light'] [data-hide-on-theme='light'] {
-	display: none;
+[data-theme="dark"] [data-hide-on-theme="dark"],
+[data-theme="light"] [data-hide-on-theme="light"] {
+  display: none;
 }
 
 ::selection {
-	background: var(--accent);
-	color: var(--secondary);
+  background: var(--accent);
+  color: var(--secondary);
 }
 
 html,
 body {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-	background-color: var(--secondary);
-	color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
 
-	font-family: var(--primary-font);
-	font-display: optional;
+  font-family: var(--primary-font);
+  font-display: optional;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	border: 0;
-	font-display: optional;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-display: optional;
 }
 
 #main {
-	min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 95px);
 }
 
 #navbar {
-	position: sticky;
-	top: 0;
-	z-index: 3;
+  z-index: 3;
 }
 
 .link {
-	background: linear-gradient(to right, var(--primary), var(--primary)),
-		linear-gradient(to right, var(--accent), var(--accent));
-	background-size:
-		100% 0.1em,
-		0 0.1em;
-	background-position:
-		100% 100%,
-		0 100%;
-	background-repeat: no-repeat;
-	transition: background-size 250ms;
+  background: linear-gradient(to right, var(--primary), var(--primary)),
+    linear-gradient(to right, var(--accent), var(--accent));
+  background-size:
+    100% 0.1em,
+    0 0.1em;
+  background-position:
+    100% 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 250ms;
 }
 
 .link:hover,
 .link:focus {
-	background-size:
-		0 0.1em,
-		100% 0.1em;
+  background-size:
+    0 0.1em,
+    100% 0.1em;
 }
 
 .discrete-link {
-	color: inherit;
-	text-decoration: underline 0.15em var(--secondary);
-	transition: text-decoration-color 250ms;
-	cursor: pointer;
+  color: inherit;
+  text-decoration: underline 0.15em var(--secondary);
+  transition: text-decoration-color 250ms;
+  cursor: pointer;
 }
 
 .discrete-link:hover,
 .discrete-link:focus {
-	text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent);
 }

@@ -1,38 +1,38 @@
 #container {
-	width: 100%;
-	margin: auto;
-	padding: 1rem;
-	position: relative;
-	top: 25vh;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+  top: 25vh;
 
-	text-align: center;
+  text-align: center;
 }
 
 #heading {
-	font-size: var(--large-text);
+  font-size: var(--large-text);
 }
 
 #text {
-	font-size: var(--medium-text);
+  font-size: var(--medium-text);
 }
 
 #error {
-	font-size: var(--small-text);
+  font-size: var(--small-text);
 }
 
 #input {
-	margin: 4px;
-	color: var(--primary);
-	background-color: transparent;
-	border-bottom: 2px solid var(--primary);
-	outline: none;
-	text-align: center;
-	width: 90vw;
-	max-width: 360px;
-	font-size: var(--medium-text);
-	margin-bottom: 0.5rem;
+  margin: 4px;
+  color: var(--primary);
+  background-color: transparent;
+  border-bottom: 2px solid var(--primary);
+  outline: none;
+  text-align: center;
+  width: 90vw;
+  max-width: 360px;
+  font-size: var(--medium-text);
+  margin-bottom: 0.5rem;
 }
 
 .subscribe_form {
-	text-align: center;
+  text-align: center;
 }

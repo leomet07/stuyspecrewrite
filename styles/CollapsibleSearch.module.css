@@ -1,37 +1,40 @@
 #collapsible_search_parent {
-	/* overflow: hidden; */
-	min-width: 32px;
-	position: relative;
-	/* Never shrink to be less than the width of the icon */
+  /* overflow: hidden; */
+  min-width: 32px;
+  position: relative;
+  /* Never shrink to be less than the width of the icon */
 }
 
 #search_button {
-	position: absolute;
-	height: 32px;
-	z-index: 2;
-	top: 0;
-	transform: translate(0, -50%);
-	/* Translate Y-axis center to be center of element, don't touch x */
+  position: absolute;
+  height: 24px;
+  z-index: 2;
+  top: 0;
+  transform: translate(0, -50%);
+  /* Translate Y-axis center to be center of element, don't touch x */
 }
 
 #search_button:hover {
-	opacity: 0.75;
+  opacity: 0.75;
+  cursor: pointer;
+  transition-duration: 0.25s;
 }
 
 #search_button:active {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 #search_textbox {
-	width: 175px;
-	border-radius: 4px;
-	transition: all 0.2s linear;
-	padding: 0.5rem;
-	font-size: 1rem;
-	position: absolute;
-	top: 0;
-	transform: translate(0, -50%);
-	/* Translate Y-axis center to be center of element, don't touch x */
+  width: 150px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  padding: 0.4rem 0.4rem 0.4rem 1rem;
+  font-size: var(--extra-small-text);
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  /* Translate Y-axis center to be center of element, don't touch x */
 }
 
 /* This is so that the icon and textbox stack on top of each other */
