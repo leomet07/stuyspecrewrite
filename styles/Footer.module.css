@@ -23,7 +23,7 @@
 	grid-column-end: 1;
 
 	text-align: left;
-	font-size: var(--medium-text);
+	font-size: 2.5rem;
 	color: var(--primary);
 	font-family: "Old English Text MT";
 }
