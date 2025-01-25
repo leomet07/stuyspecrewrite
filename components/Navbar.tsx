@@ -11,7 +11,8 @@ const Navbar = () => {
 	function toggleMenu() {
 		setViewSubSection(!viewSubSection);
 	}
-
+	let dateTime = new Date();
+	console.log(dateTime);
 	return (
 		<div id={styles.nav_parent}>
 			<nav id={styles.nav}>
