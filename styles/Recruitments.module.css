@@ -1,11 +1,128 @@
-#main {
-	text-align: center;
-	padding-top: 1rem;
-	width: 95vw;
-	max-width: 1300px;
-	margin: auto;
+.hero {
+  background-color: hsl(0, 0%, 17%);
+  color: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.heroText {
+  grid-column: 1 / span 9;
+  align-content: center;
+  margin-left: 3rem;
+  font-family: var(--primary-font);
+  height: 100vh;
+}
+.descriptionText{
+	margin-top: 1rem;
+}
+#status {
+  font-family: var(--secondary-font);
+  background-color:  hsl(0, 0%, 83%);
+  color: hsl(0, 0%, 17%);
+  max-width: fit-content;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 1rem;
+
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+#offline {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(255, 0, 0, 0.771);
+  border-radius: 100rem;
+
+  -webkit-box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.15);
+}
+#mainText {
+  font-size: clamp(1.75rem, 1.125rem + 2vw, 2.25rem);
+}
+.heroImage{
+	background-image: url("https://img.freepik.com/free-photo/top-view-old-french-newspaper-pieces_23-2149318857.jpg");
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-column: 10 / span 3;
+}
+.heroImage img{
+	background-color: hsl(0, 0%, 17%);
+	border-radius: 30rem;
+	padding: 1rem;
+	-webkit-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.44);
+	-moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.44);
+	box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.44);
+}
+.departments{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin: 2rem;
+}
+.department{
+	background-color: black;
+	min-height: 20rem;
+	color: white;
+	border-radius: 1rem;
+	position: relative;
+	z-index:0;
+	height: 100%;
+	width: 100%;
+	background-image: url("https://t4.ftcdn.net/jpg/03/00/85/23/360_F_300852306_pBgkn3EmALrtLLTSwCACu1yjIdjXy99d.jpg");
+
+	background-size: cover;
+	overflow: hidden;
+}
+#overlay{
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+#departmentheader{
+	z-index: 2;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+
+	font-size: x-large;
 }
 
+@media screen and (max-width: 900px) {
+	.hero{
+		background-image: url("https://img.freepik.com/free-photo/top-view-old-french-newspaper-pieces_23-2149318857.jpg");
+	}
+	.heroText{
+		grid-column: 1 / span 12;
+		justify-items: center;
+		text-align: center;
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+	}
+	.heroText h1{
+		color: black;
+		text-shadow: 0px 3px 2px rgba(255,255,255,0.6);
+	}
+	.heroText .descriptionText{
+		visibility: hidden;
+	}
+	.heroImage{
+		visibility: hidden;
+		max-width: 0px;
+		max-height: 0px;
+	}
+	.departments{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+/*
 .note {
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
@@ -58,3 +175,4 @@
 .due_date {
 	margin-top: 0.25rem;
 }
+*/
