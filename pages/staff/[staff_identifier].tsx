@@ -18,6 +18,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { generateMetaTags } from "../../utils/generateMetaTags";
 
+
 interface Props {
 	staff_identifier: mongoObjectId;
 	staff: ReceivedStaff;
@@ -42,6 +43,8 @@ function StaffMember(props: Props) {
 		.replace(/@/g, " [ at ] ")
 		.replace(/\./g, " [ dot ] ");
 
+	const email_href = `mailto:${staff_member.email}`;
+
 	return (
 		<div>
 			<Head>
@@ -55,6 +58,11 @@ function StaffMember(props: Props) {
 				</h1>
 
 				<span id={styles.email}>{display_email}</span>
+				<div className={styles.contactPageLinksContainer}>
+					<p>
+						<a className ="link" href={email_href}>{staff_member.email}</a>
+					</p>
+				</div>
 				<p id={styles.description}>{staff_member.description}</p>
 
 				<ListArticleDisplay articles={props.staff_articles} />
